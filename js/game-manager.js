@@ -36,7 +36,7 @@ let GameManager = {
 
         // Create enemy
 
-        let enemy00 = new Enemy('TheLichKing', 200, 0, 50, 100, 80)
+        let enemy00 = new Enemy('The Lich King', 200, 0, 50, 100, 80)
         let enemy01 = new Enemy('Sargeras', 200, 0, 70, 100, 90)
         let chooseRandomEnemy = Math.floor(Math.random() * Math.floor(2))
 
@@ -51,6 +51,6 @@ let GameManager = {
 
         getHeader.innerHTML = '<p>Task: Choose your move!</p>'
         getActions.innerHTML = '<a href="#" class="btn-prefight" onclick="PlayerMoves.calcAttack()">Attack!!</a>'
-        getEnemy.innerHTML = '<img src="img/' + enemy.enemyType.toLowerCase() + '.jpg" class="img-avatar"><div><h3>' + enemy.enemyType + '</h3> <p class="enemy-health"> Health: ' + enemy.health + '</p><p> Mana: ' + enemy.mana + '</p><p> Strength: ' + enemy.strength + '</p><p> Agiliy: ' + enemy.agility + '</p><p> Speed: ' + enemy.speed + '</p></div>'
+        getEnemy.innerHTML = '<img src="img/' + enemy.enemyType.split(' ').join('').toLowerCase() + '.jpg" class="img-avatar"><div><h3>' + enemy.enemyType + '</h3> <p class="enemy-health"> Health: ' + enemy.health + '</p><p> Mana: ' + enemy.mana + '</p><p> Strength: ' + enemy.strength + '</p><p> Agiliy: ' + enemy.agility + '</p><p> Speed: ' + enemy.speed + '</p></div>'
     }
 }
